@@ -1,0 +1,6 @@
+name: InfoStick
+version: 1.0.0
+api: ["1.0.0"]
+main: zvoop.infostick.InfoStick
+author: Zvoop
+description: Plugin for block info
