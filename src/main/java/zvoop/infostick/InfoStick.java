@@ -26,15 +26,17 @@ public class InfoStick extends PluginBase implements Listener {
             Block block = event.getBlock();
             int blockID = block.getId();
             int blockMETA = block.getDamage();
+            String blockWORLD = block.getLevelName();
             double blockCoordX = block.x;
             double blockCoordY = block.y;
             double blockCoordZ = block.z;
             String blockNAME = block.getName();
             String message = TextFormat.YELLOW + "-- Block info --" + TextFormat.GREEN  +
+                    "\n Name: " + blockNAME +
                     "\n ID: " + blockID +
                     "\n META: " + blockMETA +
-                    "\n Name: " + blockNAME +
-                    "\n Сoordinates: " + " " + blockCoordX + " " + blockCoordY + " " + blockCoordZ;
+                    "\n Сoordinates: " + " " + blockCoordX + " " + blockCoordY + " " + blockCoordZ +
+                    "\n World: " + blockWORLD ;
             player.sendMessage(message);
             event.setCancelled();
         }
